@@ -1,0 +1,2757 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--*******************************************************-->
+<!-- Copyright (c) 2003,2006, 2008-2015 Cisco Systems, Inc.-->
+<!-- All rights reserved.-->
+<!--*******************************************************-->
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+    <description>ANAPM</description>
+    <display-name>ANA-PM</display-name>
+
+<servlet>
+    <servlet-name>NBPushServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.NBPushServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>NBPushServlet</servlet-name>
+    <url-pattern>/servlet/NBPushServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>RedundancyEditor</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.RedundancyEditorServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>RedundancyEditor</servlet-name>
+    <url-pattern>/servlet/RedundancyEditor</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>GatewayUnitsSelector</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.GatewayUnitsSelector</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>GatewayUnitsSelector</servlet-name>
+    <url-pattern>/servlet/GatewayUnitsSelector</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>GroupsSelector</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.GroupsSelector</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>GroupsSelector</servlet-name>
+    <url-pattern>/servlet/GroupsSelector</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>TenantsSelector</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.TenantsSelector</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>TenantsSelector</servlet-name>
+    <url-pattern>/servlet/TenantsSelector</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>DevicesSelector</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.DevicesSelector</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>DevicesSelector</servlet-name>
+    <url-pattern>/servlet/DevicesSelector</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>UserGroupServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.UserGroupServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UserGroupServlet</servlet-name>
+    <url-pattern>/servlet/UserGroupServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>TenantServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.TenantServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>TenantServlet</servlet-name>
+    <url-pattern>/servlet/TenantServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ReportSelector</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ReportSelector</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ReportSelector</servlet-name>
+    <url-pattern>/servlet/ReportSelector</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>CommandServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.CommandServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>CommandServlet</servlet-name>
+    <url-pattern>/servlet/CommandServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>CometRequest</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.CometServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>CometRequest</servlet-name>
+    <url-pattern>/servlet/CometRequest</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>CometConnection</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.CometConnectionServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>CometConnection</servlet-name>
+    <url-pattern>/servlet/CometConnection</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ViewsServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ViewsServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ViewsServlet</servlet-name>
+    <url-pattern>/servlet/ViewsServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>CapacityPlanningServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.CapacityPlanningServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>CapacityPlanningServlet</servlet-name>
+    <url-pattern>/servlet/CapacityPlanningServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ViewsRunnerServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ViewsRunnerServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ViewsRunnerServlet</servlet-name>
+    <url-pattern>/servlet/ViewsRunnerServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>GoLiveServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.GoLiveServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>GoLiveServlet</servlet-name>
+    <url-pattern>/servlet/GoLiveServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ContentServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ContentServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ContentServlet</servlet-name>
+    <url-pattern>/servlet/ContentServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>TableLogServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.TableLogServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>TableLogServlet</servlet-name>
+    <url-pattern>/servlet/TableLogServlet</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>ObjectSelector</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ObjectSelector</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ObjectSelector</servlet-name>
+    <url-pattern>/servlet/ObjectSelector</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>NavigationServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.NavigationServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>NavigationServlet</servlet-name>
+    <url-pattern>/servlet/NavigationServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>SeriesEditorServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.SeriesEditorServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>SeriesEditorServlet</servlet-name>
+    <url-pattern>/servlet/SeriesEditorServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ReportStatus</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ReportStatusServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ReportStatus</servlet-name>
+    <url-pattern>/servlet/ReportStatus</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ReportSettings</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ReportSettingsServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ReportSettings</servlet-name>
+    <url-pattern>/servlet/ReportSettings</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Preferences</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.PreferencesServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Preferences</servlet-name>
+    <url-pattern>/servlet/Preferences</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>DashboardStatus</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.DashboardStatusServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>DashboardStatus</servlet-name>
+    <url-pattern>/servlet/DashboardStatus</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Dashboards</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.DashboardsServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Dashboards</servlet-name>
+    <url-pattern>/servlet/Dashboards</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Algorithm</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.AlgorithmServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Algorithm</servlet-name>
+    <url-pattern>/servlet/Algorithm</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>TimeZoneServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.TimeZoneServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>TimeZoneServlet</servlet-name>
+    <url-pattern>/servlet/TimeZone</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ForwardAlarms</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ForwardAlarms</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ForwardAlarms</servlet-name>
+    <url-pattern>/servlet/ForwardAlarms</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>InventorySync</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.InventorySync</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>InventorySync</servlet-name>
+    <url-pattern>/servlet/InventorySync</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>TenantSync</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.TenantSync</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>TenantSync</servlet-name>
+    <url-pattern>/servlet/TenantSync</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>WebActions</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.WebActionsServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>WebActions</servlet-name>
+    <url-pattern>/servlet/WebActions</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ReportMenu</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ReportMenuServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ReportMenu</servlet-name>
+    <url-pattern>/servlet/ReportMenu</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>Report</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ReportServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Report</servlet-name>
+    <url-pattern>/servlet/Report</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Details</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.DetailsServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Details</servlet-name>
+    <url-pattern>/servlet/Details</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Discovery</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.DiscoveryServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Discovery</servlet-name>
+    <url-pattern>/servlet/Discovery</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>SnmpEditor</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.SnmpEditorServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>SnmpEditor</servlet-name>
+    <url-pattern>/servlet/SnmpEditor</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>UnitEditor</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.UnitEditorServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UnitEditor</servlet-name>
+    <url-pattern>/servlet/UnitEditor</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>EventEditor</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.EventEditorServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>EventEditor</servlet-name>
+    <url-pattern>/servlet/EventEditor</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Editor</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.EditorServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Editor</servlet-name>
+    <url-pattern>/servlet/Editor</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Credentials</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.CredentialsServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Credentials</servlet-name>
+    <url-pattern>/servlet/Credentials</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ReportMail</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ReportMailServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ReportMail</servlet-name>
+    <url-pattern>/servlet/ReportMail</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ReportMailRunner</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ReportMailRunnerServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ReportMailRunner</servlet-name>
+    <url-pattern>/servlet/ReportMailRunner</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Thresholds</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ThresholdsServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Thresholds</servlet-name>
+    <url-pattern>/servlet/Thresholds</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ProbeConfig</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ProbeConfigServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ProbeConfig</servlet-name>
+    <url-pattern>/servlet/ProbeConfig</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Forecasts</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ForecastServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Forecasts</servlet-name>
+    <url-pattern>/servlet/Forecasts</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Groups</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.GroupsServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Groups</servlet-name>
+    <url-pattern>/servlet/Groups</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Announce</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.AnnounceServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Announce</servlet-name>
+    <url-pattern>/servlet/Announce</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Notes</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.NotesServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Notes</servlet-name>
+    <url-pattern>/servlet/Notes</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Event</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.events.EventServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Event</servlet-name>
+    <url-pattern>/servlet/Event</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>UserMan</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.UserManServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UserMan</servlet-name>
+    <url-pattern>/servlet/UserMan</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>NavTree</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.navtree.NavTreeServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>NavTree</servlet-name>
+    <url-pattern>/servlet/NavTree</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ViewNMObject</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ViewNMObjectServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ViewNMObject</servlet-name>
+    <!--
+        Create a URL mapping with "/jsp/" in the path so that we do not
+        break relative URLs.
+    -->
+    <url-pattern>/jsp/ViewNMObject</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Poller</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.poller.PollerServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Poller</servlet-name>
+    <url-pattern>/servlet/Poller</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>User</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.UserServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>User</servlet-name>
+    <url-pattern>/servlet/User</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Chart</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.Chart</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Chart</servlet-name>
+    <url-pattern>/servlet/Chart</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>BatchProvisionServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.BatchProvisionServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>BatchProvisionServlet</servlet-name>
+    <url-pattern>/servlet/BatchProvision</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>RESTReportsServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.RESTReportsServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>RESTReportsServlet</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>TSData</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.TimeSeriesDataServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>TSData</servlet-name>
+    <url-pattern>/TSData/*</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>AssuranceApiServlet</servlet-name>
+    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    <init-param>
+        <param-name>jersey.config.server.provider.packages</param-name>
+        <param-value>com.cisco.mwg.sgm.assurance</param-value>
+    </init-param>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>AssuranceApiServlet</servlet-name>
+    <url-pattern>/assurance/*</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>OpenStackIdentityServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.OpenStackIdentityServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>OpenStackIdentityServlet</servlet-name>
+    <url-pattern>/openstack/identity/v2.0/tokens</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>OpenStackTelemetryServlet</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.OpenStackTelemetryServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>OpenStackTelemetryServlet</servlet-name>
+    <url-pattern>/openstack/telemetry/v2.0/*</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>OpenStackMsgBroker</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.OpenStackMsgBrokerServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>OpenStackMsgBroker</servlet-name>
+    <url-pattern>/servlet/OpenStackMsgBroker</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ChartExporter</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ChartExporter</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ChartExporter</servlet-name>
+    <url-pattern>/servlet/ChartExporter</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>HotCharts</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.HotCharts</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>HotCharts</servlet-name>
+    <url-pattern>/servlet/HotCharts</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ThresholdAlert</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ThresholdAlertServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ThresholdAlert</servlet-name>
+    <url-pattern>/servlet/ThresholdAlert</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ViewEditor</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ViewEditor</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ViewEditor</servlet-name>
+    <url-pattern>/servlet/ViewEditor</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>SecuritySettings</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.SecuritySettingsServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>SecuritySettings</servlet-name>
+    <url-pattern>/servlet/SecuritySettings</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ThreeSixtyView</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ThreeSixtyViewServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ThreeSixtyView</servlet-name>
+    <url-pattern>/servlet/ThreeSixtyView</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ServerUtil</servlet-name>
+    <servlet-class>com.cisco.mwg.sgm.web.servlets.ServerUtilServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ServerUtil</servlet-name>
+    <url-pattern>/servlet/ServerUtil</url-pattern>
+</servlet-mapping>
+
+<filter>
+    <filter-name>ExpiresFilter</filter-name>
+    <filter-class>org.apache.catalina.filters.ExpiresFilter</filter-class>
+    <init-param>
+        <param-name>ExpiresByType text/css</param-name>
+        <param-value>access plus 30 days</param-value>
+    </init-param>
+    <init-param>
+        <param-name>ExpiresByType application/javascript</param-name>
+        <param-value>access plus 30 days</param-value>
+    </init-param>
+    <init-param>
+        <param-name>ExpiresByType text/javascript</param-name>
+        <param-value>access plus 30 days</param-value>
+    </init-param>
+</filter>
+
+<filter-mapping>
+ <filter-name>ExpiresFilter</filter-name>
+ <url-pattern>/*</url-pattern>
+ <dispatcher>REQUEST</dispatcher>
+</filter-mapping>
+
+<!-- Handle separately to avoid caching dynamically generated images -->
+<filter>
+    <filter-name>ImageExpiresFilter</filter-name>
+    <filter-class>org.apache.catalina.filters.ExpiresFilter</filter-class>
+    <init-param>
+        <param-name>ExpiresByType image</param-name>
+        <param-value>access plus 30 days</param-value>
+    </init-param>
+</filter>
+
+<filter-mapping>
+ <filter-name>ImageExpiresFilter</filter-name>
+ <url-pattern>/images/*</url-pattern>
+ <dispatcher>REQUEST</dispatcher>
+</filter-mapping>
+
+<filter>
+   <filter-name>RESTGenericFilter</filter-name>
+   <filter-class>com.cisco.mwg.sgm.web.filters.RESTGenericFilter</filter-class>
+</filter>
+
+<filter-mapping>
+   <filter-name>RESTGenericFilter</filter-name>
+   <url-pattern>/rest/*</url-pattern>
+</filter-mapping>
+
+<!-- JSP pre-comilation (JspC) automatically generates JSP filename to
+     servlet class mappings.  Please do not change following content. -->
+
+
+<!--
+Automatically created by Apache Tomcat JspC.
+Place this fragment in the web.xml before all icon, display-name,
+description, distributable, and context-param elements.
+-->
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.titleContent_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.titleContent_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.homepage_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.homepage_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.ObjectDetailsTabs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.ObjectDetailsTabs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.help_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.help_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.notes_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.notes_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.authorizeUser_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.authorizeUser_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.login_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.login_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.changePassword_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.changePassword_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.regExpValidation_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.regExpValidation_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.dbquery_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.dbquery_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.EditTabs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.EditTabs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.editMain_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.editMain_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.main_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.main_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.propertiesDisplay_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.propertiesDisplay_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.userHelp_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.userHelp_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.reportsHelp_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.reportsHelp_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.logFiles_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.logFiles_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.errorPage_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.errorPage_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.errorPage404_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.errorPage404_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.thresholdViewer_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.thresholdViewer_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.launchUrl_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.launchUrl_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.ObjDetailsTabs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.ObjDetailsTabs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.motdDisplay_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.motdDisplay_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.invalidNetworkElement_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.invalidNetworkElement_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.invalidAlarm_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.invalidAlarm_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.AccessErrorPage_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.AccessErrorPage_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.groupDetailsTabs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.groupDetailsTabs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.deviceStatus_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.deviceStatus_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.timeZoneStrValidation_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.timeZoneStrValidation_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.alarmOverview_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.alarmOverview_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.tenantDetailsTabs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.tenantDetailsTabs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.CPDetailsTabs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.CPDetailsTabs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.probeEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.probeEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.nbPush.nbPushEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.nbPush.nbPushEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.nbPush.pushDest_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.nbPush.pushDest_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.nbPush.pushFolder_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.nbPush.pushFolder_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.nbPush.pushColumn_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.nbPush.pushColumn_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.nbPush.pushWebReports_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.nbPush.pushWebReports_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.nbPush.pushDBSummary_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.nbPush.pushDBSummary_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.nbPush.pushReport_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.nbPush.pushReport_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.capacityPlannings.capacityPlanningQuery_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.capacityPlannings.capacityPlanningQuery_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.groups.groupDetails_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.groups.groupDetails_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.groups.tenantDetails_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.groups.tenantDetails_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.views.viewsStatus_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.views.viewsStatus_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.views.viewQuery_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.views.viewQuery_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.views.viewEditForm_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.views.viewEditForm_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.views.viewTable_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.views.viewTable_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.views.viewPopover_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.views.viewPopover_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.editor.definitionEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.editor.definitionEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.editor.loadFile_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.editor.loadFile_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.editor.saveFileAs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.editor.saveFileAs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.editor.summaryQuery_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.editor.summaryQuery_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.editor.summaryResults_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.editor.summaryResults_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.preferences.preferences_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.preferences.preferences_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.preferences.deviceDisplaySettings_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.preferences.deviceDisplaySettings_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.preferences.generalDisplaySettings_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.preferences.generalDisplaySettings_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.preferences.graphColorSettings_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.preferences.graphColorSettings_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.preferences.graphSettings_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.preferences.graphSettings_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.preferences.reportSettings_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.preferences.reportSettings_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.preferences.utilizationColorSettings_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.preferences.utilizationColorSettings_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.preferences.preferenceSettings_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.preferences.preferenceSettings_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.events.eventDetails_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.events.eventDetails_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.events.eventProperties_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.events.eventProperties_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.events.eventPropertiesDialog_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.events.eventPropertiesDialog_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.events.events_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.events.events_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.events.eventHelp_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.events.eventHelp_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.events.AlarmsEventsTabs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.events.AlarmsEventsTabs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.objects.server.status_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.objects.server.status_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.objects.node.status_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.objects.node.status_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.objects.node.availability_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.objects.node.availability_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.objects.node.dataCollection_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.objects.node.dataCollection_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.objects.node.nodeCollectorStatsWrapper_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.objects.node.nodeCollectorStatsWrapper_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.objects.node.nodePollingInfoWrapper_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.objects.node.nodePollingInfoWrapper_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.objects.node.subNodeStatus_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.objects.node.subNodeStatus_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.objects.common.embeddedFramePanel_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.objects.common.embeddedFramePanel_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.summaryLists_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.summaryLists_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodeDistList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.NodeDistList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodeSummaryList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.NodeSummaryList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodeUptimeList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.NodeUptimeList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.SoftwareVersions_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.SoftwareVersions_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.AlarmSummaryList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.AlarmSummaryList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodeAvgPollRspList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.NodeAvgPollRspList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.ServersSummaryList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.ServersSummaryList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodeContactLocationList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.NodeContactLocationList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.DeviceSelector_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.DeviceSelector_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.DeviceSummaryTabs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.DeviceSummaryTabs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.GatewayUnitsSelector_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.GatewayUnitsSelector_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.GroupsSummaryList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.GroupsSummaryList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.GroupsSelector_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.GroupsSelector_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodePrimeList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.NodePrimeList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.PingResponseList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.PingResponseList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodeVendorList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.NodeVendorList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.TypeAlarmSummaryList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.TypeAlarmSummaryList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.locationMap_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.locationMap_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodeDataCollectionList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.NodeDataCollectionList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.TenantsSummaryList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.TenantsSummaryList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.TenantsSelector_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.TenantsSelector_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.topologyEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.topologyEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NetworkTopology_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.NetworkTopology_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NetworkWeatherMap_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.NetworkWeatherMap_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.RedundancyEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.summaryLists.RedundancyEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.reports.reports_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.reports.reports_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.reports.reportSettings_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.reports.reportSettings_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.reports.statsQuery_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.reports.statsQuery_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.reports.reportStatus_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.reports.reportStatus_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.reports.dashboardStatus_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.reports.dashboardStatus_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.reports.reportSelector_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.reports.reportSelector_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.reports.dashboardQuery_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.reports.dashboardQuery_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.reports.reportCustomAgeEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.reports.reportCustomAgeEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.reports.reportsForTableDialog_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.reports.reportsForTableDialog_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.reports.reportFilterDialog_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.reports.reportFilterDialog_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.credentialsEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.credentialsEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.discoveryPage_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.discoveryPage_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.loadSeed_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.loadSeed_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.motd_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.motd_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.saveSeedAs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.saveSeedAs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.snmpEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.snmpEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.showCommandLog_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.showCommandLog_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.inventorySync_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.inventorySync_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.unitEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.unitEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.primeCentral_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.primeCentral_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.adminDashboard_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.adminDashboard_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.eventEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.eventEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.thresholdEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.thresholdEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.displayCommandLog_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.displayCommandLog_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.pollingPolicyEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.pollingPolicyEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.reportPolicyEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.reportPolicyEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.premotd_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.premotd_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.securitySettingsPage_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.securitySettingsPage_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.manageUsers_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.manageUsers_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.usersList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.usersList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.changePassword_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.changePassword_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.systemConfiguration_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.systemConfiguration_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.localPasswordPolicy_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.localPasswordPolicy_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.activeSessions_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.activeSessions_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.tenantSync_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.tenantSync_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.backupTimes_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.backupTimes_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.userGroups_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.userGroups_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.reportMailEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.reportMailEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.userGroupPopoverContent_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.userGroupPopoverContent_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.reportEditor_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.reportEditor_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.tenantSyncTabs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.tenantSyncTabs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.openstackTenantSync_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.openstackTenantSync_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.addUserDialog_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.addUserDialog_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.editUserDialog_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.editUserDialog_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.pnsc_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.pnsc_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.userDetailsPopoverContent_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.userDetailsPopoverContent_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.messageLogSetting_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.messageLogSetting_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.tenantsList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.tenantsList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.tenantPopoverContent_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.tenantPopoverContent_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.tenantsDetailsPopoverContent_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.tenantsDetailsPopoverContent_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.admin.openstackMsgBroker_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.admin.openstackMsgBroker_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.utils.browserCheck_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.utils.browserCheck_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.utils.listMibs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.utils.listMibs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.utils.showCommand_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.utils.showCommand_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.utils.showFile_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.utils.showFile_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.utils.listFiles_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.utils.listFiles_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.utils.listReports_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.utils.listReports_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.utils.listRfcs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.utils.listRfcs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.utils.securityLogFile_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.utils.securityLogFile_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.utils.displayListFiles_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.utils.displayListFiles_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.jsp.utils.urlList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.jsp.utils.urlList_jsp</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.titleContent_jsp</servlet-name>
+        <url-pattern>/jsp/titleContent.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.homepage_jsp</servlet-name>
+        <url-pattern>/jsp/homepage.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.ObjectDetailsTabs_jsp</servlet-name>
+        <url-pattern>/jsp/ObjectDetailsTabs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.help_jsp</servlet-name>
+        <url-pattern>/jsp/help.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.notes_jsp</servlet-name>
+        <url-pattern>/jsp/notes.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.authorizeUser_jsp</servlet-name>
+        <url-pattern>/jsp/authorizeUser.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.login_jsp</servlet-name>
+        <url-pattern>/jsp/login.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.changePassword_jsp</servlet-name>
+        <url-pattern>/jsp/changePassword.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.regExpValidation_jsp</servlet-name>
+        <url-pattern>/jsp/regExpValidation.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.dbquery_jsp</servlet-name>
+        <url-pattern>/jsp/dbquery.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.EditTabs_jsp</servlet-name>
+        <url-pattern>/jsp/EditTabs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.editMain_jsp</servlet-name>
+        <url-pattern>/jsp/editMain.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.main_jsp</servlet-name>
+        <url-pattern>/jsp/main.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.propertiesDisplay_jsp</servlet-name>
+        <url-pattern>/jsp/propertiesDisplay.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.userHelp_jsp</servlet-name>
+        <url-pattern>/jsp/userHelp.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.reportsHelp_jsp</servlet-name>
+        <url-pattern>/jsp/reportsHelp.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.logFiles_jsp</servlet-name>
+        <url-pattern>/jsp/logFiles.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.errorPage_jsp</servlet-name>
+        <url-pattern>/jsp/errorPage.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.errorPage404_jsp</servlet-name>
+        <url-pattern>/jsp/errorPage404.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.thresholdViewer_jsp</servlet-name>
+        <url-pattern>/jsp/thresholdViewer.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.launchUrl_jsp</servlet-name>
+        <url-pattern>/jsp/launchUrl.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.ObjDetailsTabs_jsp</servlet-name>
+        <url-pattern>/jsp/ObjDetailsTabs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.motdDisplay_jsp</servlet-name>
+        <url-pattern>/jsp/motdDisplay.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.invalidNetworkElement_jsp</servlet-name>
+        <url-pattern>/jsp/invalidNetworkElement.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.invalidAlarm_jsp</servlet-name>
+        <url-pattern>/jsp/invalidAlarm.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.AccessErrorPage_jsp</servlet-name>
+        <url-pattern>/jsp/AccessErrorPage.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.groupDetailsTabs_jsp</servlet-name>
+        <url-pattern>/jsp/groupDetailsTabs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.deviceStatus_jsp</servlet-name>
+        <url-pattern>/jsp/deviceStatus.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.timeZoneStrValidation_jsp</servlet-name>
+        <url-pattern>/jsp/timeZoneStrValidation.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.alarmOverview_jsp</servlet-name>
+        <url-pattern>/jsp/alarmOverview.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.tenantDetailsTabs_jsp</servlet-name>
+        <url-pattern>/jsp/tenantDetailsTabs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.CPDetailsTabs_jsp</servlet-name>
+        <url-pattern>/jsp/CPDetailsTabs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.probeEditor_jsp</servlet-name>
+        <url-pattern>/jsp/probeEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.nbPush.nbPushEditor_jsp</servlet-name>
+        <url-pattern>/jsp/nbPush/nbPushEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.nbPush.pushDest_jsp</servlet-name>
+        <url-pattern>/jsp/nbPush/pushDest.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.nbPush.pushFolder_jsp</servlet-name>
+        <url-pattern>/jsp/nbPush/pushFolder.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.nbPush.pushColumn_jsp</servlet-name>
+        <url-pattern>/jsp/nbPush/pushColumn.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.nbPush.pushWebReports_jsp</servlet-name>
+        <url-pattern>/jsp/nbPush/pushWebReports.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.nbPush.pushDBSummary_jsp</servlet-name>
+        <url-pattern>/jsp/nbPush/pushDBSummary.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.nbPush.pushReport_jsp</servlet-name>
+        <url-pattern>/jsp/nbPush/pushReport.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.capacityPlannings.capacityPlanningQuery_jsp</servlet-name>
+        <url-pattern>/jsp/capacityPlannings/capacityPlanningQuery.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.groups.groupDetails_jsp</servlet-name>
+        <url-pattern>/jsp/groups/groupDetails.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.groups.tenantDetails_jsp</servlet-name>
+        <url-pattern>/jsp/groups/tenantDetails.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.views.viewsStatus_jsp</servlet-name>
+        <url-pattern>/jsp/views/viewsStatus.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.views.viewQuery_jsp</servlet-name>
+        <url-pattern>/jsp/views/viewQuery.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.views.viewEditForm_jsp</servlet-name>
+        <url-pattern>/jsp/views/viewEditForm.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.views.viewTable_jsp</servlet-name>
+        <url-pattern>/jsp/views/viewTable.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.views.viewPopover_jsp</servlet-name>
+        <url-pattern>/jsp/views/viewPopover.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.editor.definitionEditor_jsp</servlet-name>
+        <url-pattern>/jsp/editor/definitionEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.editor.loadFile_jsp</servlet-name>
+        <url-pattern>/jsp/editor/loadFile.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.editor.saveFileAs_jsp</servlet-name>
+        <url-pattern>/jsp/editor/saveFileAs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.editor.summaryQuery_jsp</servlet-name>
+        <url-pattern>/jsp/editor/summaryQuery.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.editor.summaryResults_jsp</servlet-name>
+        <url-pattern>/jsp/editor/summaryResults.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.preferences.preferences_jsp</servlet-name>
+        <url-pattern>/jsp/preferences/preferences.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.preferences.deviceDisplaySettings_jsp</servlet-name>
+        <url-pattern>/jsp/preferences/deviceDisplaySettings.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.preferences.generalDisplaySettings_jsp</servlet-name>
+        <url-pattern>/jsp/preferences/generalDisplaySettings.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.preferences.graphColorSettings_jsp</servlet-name>
+        <url-pattern>/jsp/preferences/graphColorSettings.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.preferences.graphSettings_jsp</servlet-name>
+        <url-pattern>/jsp/preferences/graphSettings.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.preferences.reportSettings_jsp</servlet-name>
+        <url-pattern>/jsp/preferences/reportSettings.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.preferences.utilizationColorSettings_jsp</servlet-name>
+        <url-pattern>/jsp/preferences/utilizationColorSettings.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.preferences.preferenceSettings_jsp</servlet-name>
+        <url-pattern>/jsp/preferences/preferenceSettings.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.events.eventDetails_jsp</servlet-name>
+        <url-pattern>/jsp/events/eventDetails.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.events.eventProperties_jsp</servlet-name>
+        <url-pattern>/jsp/events/eventProperties.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.events.eventPropertiesDialog_jsp</servlet-name>
+        <url-pattern>/jsp/events/eventPropertiesDialog.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.events.events_jsp</servlet-name>
+        <url-pattern>/jsp/events/events.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.events.eventHelp_jsp</servlet-name>
+        <url-pattern>/jsp/events/eventHelp.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.events.AlarmsEventsTabs_jsp</servlet-name>
+        <url-pattern>/jsp/events/AlarmsEventsTabs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.objects.server.status_jsp</servlet-name>
+        <url-pattern>/jsp/objects/server/status.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.objects.node.status_jsp</servlet-name>
+        <url-pattern>/jsp/objects/node/status.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.objects.node.availability_jsp</servlet-name>
+        <url-pattern>/jsp/objects/node/availability.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.objects.node.dataCollection_jsp</servlet-name>
+        <url-pattern>/jsp/objects/node/dataCollection.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.objects.node.nodeCollectorStatsWrapper_jsp</servlet-name>
+        <url-pattern>/jsp/objects/node/nodeCollectorStatsWrapper.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.objects.node.nodePollingInfoWrapper_jsp</servlet-name>
+        <url-pattern>/jsp/objects/node/nodePollingInfoWrapper.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.objects.node.subNodeStatus_jsp</servlet-name>
+        <url-pattern>/jsp/objects/node/subNodeStatus.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.objects.common.embeddedFramePanel_jsp</servlet-name>
+        <url-pattern>/jsp/objects/common/embeddedFramePanel.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.summaryLists_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/summaryLists.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodeDistList_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/NodeDistList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodeSummaryList_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/NodeSummaryList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodeUptimeList_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/NodeUptimeList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.SoftwareVersions_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/SoftwareVersions.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.AlarmSummaryList_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/AlarmSummaryList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodeAvgPollRspList_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/NodeAvgPollRspList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.ServersSummaryList_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/ServersSummaryList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodeContactLocationList_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/NodeContactLocationList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.DeviceSelector_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/DeviceSelector.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.DeviceSummaryTabs_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/DeviceSummaryTabs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.GatewayUnitsSelector_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/GatewayUnitsSelector.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.GroupsSummaryList_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/GroupsSummaryList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.GroupsSelector_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/GroupsSelector.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodePrimeList_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/NodePrimeList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.PingResponseList_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/PingResponseList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodeVendorList_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/NodeVendorList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.TypeAlarmSummaryList_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/TypeAlarmSummaryList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.locationMap_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/locationMap.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NodeDataCollectionList_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/NodeDataCollectionList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.TenantsSummaryList_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/TenantsSummaryList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.TenantsSelector_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/TenantsSelector.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.topologyEditor_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/topologyEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NetworkTopology_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/NetworkTopology.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.NetworkWeatherMap_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/NetworkWeatherMap.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.summaryLists.RedundancyEditor_jsp</servlet-name>
+        <url-pattern>/jsp/summaryLists/RedundancyEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.reports.reports_jsp</servlet-name>
+        <url-pattern>/jsp/reports/reports.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.reports.reportSettings_jsp</servlet-name>
+        <url-pattern>/jsp/reports/reportSettings.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.reports.statsQuery_jsp</servlet-name>
+        <url-pattern>/jsp/reports/statsQuery.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.reports.reportStatus_jsp</servlet-name>
+        <url-pattern>/jsp/reports/reportStatus.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.reports.dashboardStatus_jsp</servlet-name>
+        <url-pattern>/jsp/reports/dashboardStatus.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.reports.reportSelector_jsp</servlet-name>
+        <url-pattern>/jsp/reports/reportSelector.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.reports.dashboardQuery_jsp</servlet-name>
+        <url-pattern>/jsp/reports/dashboardQuery.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.reports.reportCustomAgeEditor_jsp</servlet-name>
+        <url-pattern>/jsp/reports/reportCustomAgeEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.reports.reportsForTableDialog_jsp</servlet-name>
+        <url-pattern>/jsp/reports/reportsForTableDialog.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.reports.reportFilterDialog_jsp</servlet-name>
+        <url-pattern>/jsp/reports/reportFilterDialog.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.credentialsEditor_jsp</servlet-name>
+        <url-pattern>/jsp/admin/credentialsEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.discoveryPage_jsp</servlet-name>
+        <url-pattern>/jsp/admin/discoveryPage.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.loadSeed_jsp</servlet-name>
+        <url-pattern>/jsp/admin/loadSeed.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.motd_jsp</servlet-name>
+        <url-pattern>/jsp/admin/motd.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.saveSeedAs_jsp</servlet-name>
+        <url-pattern>/jsp/admin/saveSeedAs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.snmpEditor_jsp</servlet-name>
+        <url-pattern>/jsp/admin/snmpEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.showCommandLog_jsp</servlet-name>
+        <url-pattern>/jsp/admin/showCommandLog.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.inventorySync_jsp</servlet-name>
+        <url-pattern>/jsp/admin/inventorySync.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.unitEditor_jsp</servlet-name>
+        <url-pattern>/jsp/admin/unitEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.primeCentral_jsp</servlet-name>
+        <url-pattern>/jsp/admin/primeCentral.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.adminDashboard_jsp</servlet-name>
+        <url-pattern>/jsp/admin/adminDashboard.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.eventEditor_jsp</servlet-name>
+        <url-pattern>/jsp/admin/eventEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.thresholdEditor_jsp</servlet-name>
+        <url-pattern>/jsp/admin/thresholdEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.displayCommandLog_jsp</servlet-name>
+        <url-pattern>/jsp/admin/displayCommandLog.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.pollingPolicyEditor_jsp</servlet-name>
+        <url-pattern>/jsp/admin/pollingPolicyEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.reportPolicyEditor_jsp</servlet-name>
+        <url-pattern>/jsp/admin/reportPolicyEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.premotd_jsp</servlet-name>
+        <url-pattern>/jsp/admin/premotd.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.securitySettingsPage_jsp</servlet-name>
+        <url-pattern>/jsp/admin/securitySettingsPage.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.manageUsers_jsp</servlet-name>
+        <url-pattern>/jsp/admin/manageUsers.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.usersList_jsp</servlet-name>
+        <url-pattern>/jsp/admin/usersList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.changePassword_jsp</servlet-name>
+        <url-pattern>/jsp/admin/changePassword.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.systemConfiguration_jsp</servlet-name>
+        <url-pattern>/jsp/admin/systemConfiguration.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.localPasswordPolicy_jsp</servlet-name>
+        <url-pattern>/jsp/admin/localPasswordPolicy.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.activeSessions_jsp</servlet-name>
+        <url-pattern>/jsp/admin/activeSessions.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.tenantSync_jsp</servlet-name>
+        <url-pattern>/jsp/admin/tenantSync.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.backupTimes_jsp</servlet-name>
+        <url-pattern>/jsp/admin/backupTimes.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.userGroups_jsp</servlet-name>
+        <url-pattern>/jsp/admin/userGroups.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.reportMailEditor_jsp</servlet-name>
+        <url-pattern>/jsp/admin/reportMailEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.userGroupPopoverContent_jsp</servlet-name>
+        <url-pattern>/jsp/admin/userGroupPopoverContent.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.reportEditor_jsp</servlet-name>
+        <url-pattern>/jsp/admin/reportEditor.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.tenantSyncTabs_jsp</servlet-name>
+        <url-pattern>/jsp/admin/tenantSyncTabs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.openstackTenantSync_jsp</servlet-name>
+        <url-pattern>/jsp/admin/openstackTenantSync.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.addUserDialog_jsp</servlet-name>
+        <url-pattern>/jsp/admin/addUserDialog.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.editUserDialog_jsp</servlet-name>
+        <url-pattern>/jsp/admin/editUserDialog.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.pnsc_jsp</servlet-name>
+        <url-pattern>/jsp/admin/pnsc.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.userDetailsPopoverContent_jsp</servlet-name>
+        <url-pattern>/jsp/admin/userDetailsPopoverContent.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.messageLogSetting_jsp</servlet-name>
+        <url-pattern>/jsp/admin/messageLogSetting.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.tenantsList_jsp</servlet-name>
+        <url-pattern>/jsp/admin/tenantsList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.tenantPopoverContent_jsp</servlet-name>
+        <url-pattern>/jsp/admin/tenantPopoverContent.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.tenantsDetailsPopoverContent_jsp</servlet-name>
+        <url-pattern>/jsp/admin/tenantsDetailsPopoverContent.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.admin.openstackMsgBroker_jsp</servlet-name>
+        <url-pattern>/jsp/admin/openstackMsgBroker.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.utils.browserCheck_jsp</servlet-name>
+        <url-pattern>/jsp/utils/browserCheck.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.utils.listMibs_jsp</servlet-name>
+        <url-pattern>/jsp/utils/listMibs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.utils.showCommand_jsp</servlet-name>
+        <url-pattern>/jsp/utils/showCommand.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.utils.showFile_jsp</servlet-name>
+        <url-pattern>/jsp/utils/showFile.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.utils.listFiles_jsp</servlet-name>
+        <url-pattern>/jsp/utils/listFiles.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.utils.listReports_jsp</servlet-name>
+        <url-pattern>/jsp/utils/listReports.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.utils.listRfcs_jsp</servlet-name>
+        <url-pattern>/jsp/utils/listRfcs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.utils.securityLogFile_jsp</servlet-name>
+        <url-pattern>/jsp/utils/securityLogFile.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.utils.displayListFiles_jsp</servlet-name>
+        <url-pattern>/jsp/utils/displayListFiles.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.jsp.utils.urlList_jsp</servlet-name>
+        <url-pattern>/jsp/utils/urlList.jsp</url-pattern>
+    </servlet-mapping>
+
+<!--
+All session-config, mime-mapping, welcome-file-list, error-page, taglib,
+resource-ref, security-constraint, login-config, security-role,
+env-entry, and ejb-ref elements should follow this fragment.
+-->
+
+
+<!-- Security related constraints are defined here -->
+<!-- User Access constraints START_SECURITY_CONSTRAINT
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>PPM Application</web-resource-name>
+            <url-pattern>/jsp/*</url-pattern>
+            <url-pattern>/html/*</url-pattern>
+            <url-pattern>/TSData/*</url-pattern>
+            <url-pattern>/servlet/NavTree</url-pattern>
+            <url-pattern>/servlet/Report</url-pattern>
+            <url-pattern>/servlet/ViewNMObject</url-pattern>
+            <http-method>POST</http-method>
+            <http-method>GET</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>User</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>RESTRICTED HTTP METHODS</web-resource-name>
+            <url-pattern>/*</url-pattern>
+            <http-method>PUT</http-method>
+            <http-method>OPTIONS</http-method>
+            <http-method>TRACE</http-method>
+            <http-method>CONNECT</http-method>
+            <http-method>DELETE</http-method>
+        </web-resource-collection>
+        <auth-constraint/>
+    </security-constraint>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+        <form-login-page>/jsp/login.jsp</form-login-page>
+        <form-error-page>/jsp/login.jsp?success=false</form-error-page>
+        </form-login-config>
+    </login-config>
+
+    <security-role>
+        <role-name>User</role-name>
+    </security-role>
+    <listener>
+    <description>sessionListener</description>
+    <listener-class>
+        com.cisco.mwg.sgm.web.realtime.WebClientManager
+    </listener-class>
+     </listener>
+    <filter>
+       <filter-name>UserAccessFilter</filter-name>
+       <filter-class>com.cisco.mwg.sgm.web.filters.UserAccessFilter</filter-class>
+       <init-param>
+          <param-name>loginPage</param-name>
+          <param-value>/jsp/login.jsp?logout=true</param-value>
+       </init-param>
+       <init-param>
+          <param-name>expiredPasswordPage</param-name>
+          <param-value>/jsp/changePassword.jsp?expired=true</param-value>
+       </init-param>
+       <init-param>
+          <param-name>changePasswordPage</param-name>
+          <param-value>/jsp/changePassword.jsp</param-value>
+       </init-param>
+    </filter>
+    <filter-mapping>
+       <filter-name>UserAccessFilter</filter-name>
+       <url-pattern>/jsp/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+       <filter-name>RESTAuthenticationFilter</filter-name>
+       <filter-class>com.cisco.mwg.sgm.web.filters.RESTAuthenticationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+       <filter-name>RESTAuthenticationFilter</filter-name>
+       <url-pattern>/rest/*</url-pattern>
+    </filter-mapping>
+END_SECURITY_CONSTRAINT User Access constraints  -->
+
+<!-- NOTES about SSO security section below since no comments can be in there -->
+  <!-- CAS Log out must be first before any Spring/CAS filter  -->
+  <!-- CAS Authentication and Validation -->
+  <!-- TicketValidationFilter -->
+  <!-- CAS Remote User -->
+  <!-- CAS Assertion Thread Local Filter -->
+  <!-- CAS Timeout filter - should be last -->
+  <!-- copied from above since the doc said to make this last -->
+  <!-- this was not mentioned in the CAS web page, though -->
+
+<!-- START_PRIME_SSO_SECURITY_HERE
+ <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>RESTRICTED HTTP METHODS</web-resource-name>
+            <url-pattern>/*</url-pattern>
+            <http-method>PUT</http-method>
+            <http-method>OPTIONS</http-method>
+            <http-method>TRACE</http-method>
+            <http-method>CONNECT</http-method>
+            <http-method>DELETE</http-method>
+        </web-resource-collection>
+        <auth-constraint/>
+    </security-constraint>
+  <filter>
+    <filter-name>CAS Single Sign Out Filter</filter-name>
+    <filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>
+  </filter>
+  <listener>
+    <listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>
+  </listener>
+  <filter-mapping>
+    <filter-name>CAS Single Sign Out Filter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <context-param>
+    <param-name>serverName</param-name> <param-value>https://__SGMSVR_HOST__:__SGMSVR_WEB_PORT__</param-value>
+  </context-param>
+  <filter>
+    <filter-name>CAS Authentication Filter</filter-name>
+    <filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>
+    <init-param>
+      <param-name>casServerLoginUrl</param-name> <param-value>https://__PRIME_CENTRAL_HOST__:__PRIME_CENTRAL_WEB_PORT__/SSO/login</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CAS Authentication Filter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>CAS Authentication Filter</filter-name>
+    <url-pattern>/ppm/servlet/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>PRIME CAS Validation Filter</filter-name>
+    <filter-class>com.cisco.prime.sso.client.validation.SSOCas20ProxyReceivingTicketValidationFilter</filter-class>
+    <init-param>
+      <param-name>casServerUrlPrefix</param-name> <param-value>https://__PRIME_CENTRAL_HOST__:__PRIME_CENTRAL_WEB_PORT__/SSO</param-value>
+    </init-param>
+    <init-param>
+      <param-name>serverName</param-name> <param-value>https://__SGMSVR_HOST__:__SGMSVR_WEB_PORT__</param-value>
+    </init-param>
+    <init-param>
+      <param-name>useSession</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>exceptionOnValidationFailure</param-name>
+      <param-value>false</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>PRIME CAS Validation Filter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>PRIME CAS Validation Filter</filter-name>
+    <url-pattern>/ppm/servlet/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+    <filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+    <url-pattern>/ppm/servlet/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>CAS Assertion Thread Local Filter</filter-name>
+    <filter-class>org.jasig.cas.client.util.AssertionThreadLocalFilter </filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CAS Assertion Thread Local Filter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>CAS Assertion Thread Local Filter</filter-name>
+    <url-pattern>/ppm/servlet/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>PRIME CAS Timeout Filter</filter-name>
+    <filter-class>com.cisco.prime.sso.client.filter.SSOTimeoutFilter</filter-class>
+    <init-param>
+      <param-name>casServerUrlPrefix</param-name> <param-value>https://__PRIME_CENTRAL_HOST__:__PRIME_CENTRAL_WEB_PORT__/SSO</param-value>
+    </init-param>
+    <init-param>
+      <param-name>casActivityInterval</param-name>
+      <param-value>2</param-value>
+    </init-param>
+    <init-param>
+      <param-name>excludedPattern</param-name>
+      <param-value>.*/ppm/servlet/NavTree?action=updateTree.*</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>PRIME CAS Timeout Filter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>PRIME CAS Timeout Filter</filter-name>
+    <url-pattern>/ppm/servlet/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>RESTAuthenticationFilter</filter-name>
+    <filter-class>com.cisco.mwg.sgm.web.filters.RESTAuthenticationFilter</filter-class>
+    <init-param>
+      <param-name>casServerUrlPrefix</param-name> <param-value>https://__PRIME_CENTRAL_HOST__:__PRIME_CENTRAL_WEB_PORT__/SSO</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>RESTAuthenticationFilter</filter-name>
+    <url-pattern>/rest/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>OpenStackSsoFilter</filter-name>
+    <filter-class>com.cisco.mwg.sgm.web.filters.OpenStackSsoFilter</filter-class>
+    <init-param>
+      <param-name>casServerUrlPrefix</param-name> <param-value>https://__PRIME_CENTRAL_HOST__:__PRIME_CENTRAL_WEB_PORT__/SSO</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>OpenStackSsoFilter</filter-name>
+    <url-pattern>/openstack/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>PPM SSO User Changed Filter</filter-name>
+    <filter-class>com.cisco.mwg.sgm.web.filters.PrimeCentralUserChangeFilter</filter-class>
+    <init-param>
+      <param-name>casServerLogoutUrl</param-name> <param-value>THIS_GETS_REPLACED</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>PPM SSO User Changed Filter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+
+END_PRIME_SSO_SECURITY_HERE -->
+
+
+<filter>
+   <filter-name>IpAccessFilter</filter-name>
+   <filter-class>com.cisco.mwg.sgm.web.filters.IpAccessFilter</filter-class>
+   <init-param>
+      <param-name>accessErrorPage</param-name>
+      <param-value>/jsp/AccessErrorPage.jsp</param-value>
+   </init-param>
+   <init-param>
+      <param-name>debug</param-name>
+      <param-value>false</param-value>
+   </init-param>
+</filter>
+<filter-mapping>
+   <filter-name>IpAccessFilter</filter-name>
+   <url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<filter>
+   <filter-name>RESTReportsFilter</filter-name>
+   <filter-class>com.cisco.mwg.sgm.web.filters.RESTReportsFilter</filter-class>
+</filter>
+
+<filter-mapping>
+   <filter-name>RESTReportsFilter</filter-name>
+   <url-pattern>/rest/*</url-pattern>
+</filter-mapping>
+
+<filter>
+    <filter-name>NBAPIAuthenticationFilter</filter-name>
+    <filter-class>com.cisco.mwg.sgm.web.filters.NBAPIAuthenticationFilter</filter-class>
+</filter>
+
+<filter-mapping>
+    <filter-name>NBAPIAuthenticationFilter</filter-name>
+    <url-pattern>/assurance/*</url-pattern>
+</filter-mapping>
+
+<filter>
+    <filter-name>CORSFilter</filter-name>
+    <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+    <init-param>
+        <param-name>cors.allowed.headers</param-name>
+        <param-value>Content-Type,X-Requested-With,accept,Origin,Authorization,X-CSRF-Token,Access-Control-Request-Method,Access-Control-Request-Headers</param-value>
+    </init-param>
+    <init-param>
+        <param-name>cors.exposed.headers</param-name>
+        <param-value>Access-Control-Allow-Origin,Access-Control-Allow-Credentials</param-value>
+    </init-param>
+    <init-param>
+        <param-name>cors.support.credentials</param-name>
+        <param-value>true</param-value>
+    </init-param>
+</filter>
+
+<filter-mapping>
+    <filter-name>CORSFilter</filter-name>
+    <url-pattern>/TSData/*</url-pattern>
+</filter-mapping>
+
+<filter>
+    <filter-name>TSAPIAuthenticationFilter</filter-name>
+    <filter-class>com.cisco.mwg.sgm.web.filters.TSAPIAuthenticationFilter</filter-class>
+</filter>
+
+<filter-mapping>
+    <filter-name>TSAPIAuthenticationFilter</filter-name>
+    <url-pattern>/TSData/*</url-pattern>
+</filter-mapping>
+
+<!-- Error Pages -->
+
+<error-page>
+   <exception-type>
+      java.lang.Exception
+   </exception-type>
+   <location>/jsp/errorPage.jsp</location>
+</error-page>
+
+<error-page>
+    <error-code>404</error-code>
+    <location>/jsp/errorPage404.jsp</location>
+</error-page>
+
+
+<!-- Taglibs -->
+
+<jsp-config>
+    <taglib>
+        <taglib-uri>/rtpnm</taglib-uri>
+        <taglib-location>/WEB-INF/rtpnm.tld</taglib-location>
+    </taglib>
+</jsp-config>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
